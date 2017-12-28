@@ -1,0 +1,54 @@
+{
+  "name": "ya-hexlet-practice",
+  "version": "0.0.1",
+  "description": "My practice on Hexlet.io",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "jest",
+    "eslint": "eslint --format codeframe",
+    "babel-node": "babel-node",
+    "build": "NODE_ENV=prodaction babel src --out-dir dist --source-maps inline",
+    "prepublishOnly": "npm run build",
+    "flow": "flow"
+  },
+  "bin": {
+    "practice-hexlet-ya": "dist/bin/practice-bin.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "author": "Yakovlev Alexander",
+  "license": "ISC",
+  "jest": {
+    "testEnvironment": "node",
+    "coverageReporters": [
+      "text",
+      "html"
+    ]
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.2",
+    "babel-jest": "*",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "eslint": "^4.13.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jest": "*",
+    "jest": "*",
+    "jest-cli": "*",
+    "babel-preset-flow": "*",
+    "flow-bin": "*"
+  },
+  "dependencies": {
+    "commander": "*",
+    "hexlet-pairs-data": "*",
+    "fs": "*",
+    "lodash": "*",
+    "js-yaml": "*",
+    "path": "*",
+    "ini": "*"
+  }
+}
