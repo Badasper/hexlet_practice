@@ -45,6 +45,7 @@
   "dependencies": {
     "commander": "*",
     "hexlet-pairs-data": "*",
+    "hexlet-html-tags": "*",
     "fs": "*",
     "lodash": "*",
     "js-yaml": "*",
