@@ -3,7 +3,6 @@ import { l, isList, isEmpty, head, tail, concat, toString as listToString } from
 // eslint-disable-next-line
 import { is, toString as htmlToString, hasChildren, children, filter, reduce } from 'hexlet-html-tags';
 
-
 const select = (query, dom) => {
   const getStartTags = (startTag, dom2) => {
     const filtered = filter(element => is(startTag, element), dom2);
