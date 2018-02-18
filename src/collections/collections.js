@@ -14,7 +14,7 @@ const findOdd = (arr) => {
   }, new Map());
   const ans = Array.from(numbers.keys()).filter(item => numbers.get(item) % 2 > 0);
 
-  return ans...;
+  return ans;
 };
 
 export { intersection, findOdd };
