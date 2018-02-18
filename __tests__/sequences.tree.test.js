@@ -25,12 +25,11 @@ describe('dom', () => {
   });
 
   it('#select', () => {
-    // console.log(htmlToString(select(l('p', 'ul', 'li'), dom)));
     expect(length(select(l('p', 'ul', 'li'), dom))).toBe(3);
     expect(length(select(l('div', 'div', 'p'), dom))).toBe(1);
     expect(length(select(l('div', 'p'), dom))).toBe(3);
     expect(length(select(l('p'), dom))).toBe(7);
     expect(length(select(l('ul'), dom))).toBe(2);
-    expect(length(select(l('div'), dom))).toBe(3);
+    expect(length(select(l('div'), dom))).toBe(4);
   });
 });

@@ -1,3 +1,4 @@
+// My list data structure
 const substr = (str, index = 0, length = str.length) => str.substr(index, length);
 const length = str => str.length;
 const indexOf = (str, s) => str.indexOf(s);

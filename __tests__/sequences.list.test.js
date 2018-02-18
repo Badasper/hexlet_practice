@@ -1,8 +1,6 @@
-import { listTask } from '../src/sequences';
+import { l, head, tail, filter, map, reduce, isEmpty, cons, toString } from '../src/sequences/list';
 
-const {
-  l, head, tail, filter, map, reduce, isEmpty, cons, toString,
-} = listTask;
+
 test('isEmpty list', () => {
   const list = l();
   expect(toString(list)).toBe('()');
