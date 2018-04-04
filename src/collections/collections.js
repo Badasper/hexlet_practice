@@ -13,8 +13,22 @@ const findOdd = (arr) => {
     return acc.set(item, 1);
   }, new Map());
   const ans = Array.from(numbers.keys()).filter(item => numbers.get(item) % 2 > 0);
-
-  return ans;
+  return ans[0];
 };
 
-export { intersection, findOdd };
+const chunk = (arr, num) => {
+  const chunked = arr.reduce((acc, item, idx, arrInternal) => {
+    if (idx % num === 0) {
+      return [...acc, arrInternal.slice(idx, idx + num)];
+    }
+    return acc;
+  }, []);
+  return chunked;
+};
+
+const difference = (arr1, arr2) => {
+  const setArr2 = new Set(arr2);
+  return arr1.filter(item => !setArr2.has(item));
+};
+
+export { intersection, findOdd, chunk, difference };
