@@ -1,4 +1,6 @@
-import { parse, PairedTag, SingleTag } from '../src/prototypes/astClassBased';
+import parse from '../src/prototypes/astClassBased';
+import PairedTag from '../src/prototypes/PairedTag';
+import SingleTag from '../src/prototypes/SingleTag';
 
 describe('HtmlBuilder', () => {
   it('#parse', () => {

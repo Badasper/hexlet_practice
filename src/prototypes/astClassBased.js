@@ -1,51 +1,14 @@
 import _ from 'lodash'; // eslint-disable-line
 
-// PairedTag Start
-class PairedTag {
-  constructor(name, attributes = {}, body = '', children = []) {
-    this.name = name;
-    this.attributes = attributes;
-    this.body = body;
-    this.children = children;
-  }
-  buildAttrString() {
-    return Object.keys(this.attributes).map(key => ` ${key}="${this.attributes[key]}"`).join('');
-  }
+import SingleTag from './SingleTag';
+import PairedTag from './PairedTag';
 
-  toString() {
-    const value = this.children.length > 0 ?
-      this.children.map(arg => arg.toString()).join('') : this.body;
-    return `<${this.name}${this.buildAttrString()}>${value}</${this.name}>`;
-  }
-}
-// PairedTag End
-
-// PairedTag Start
-class SingleTag {
-  constructor(name, attributes = {}) {
-    this.name = name;
-    this.attributes = attributes;
-  }
-
-  buildAttrString() {
-    return Object.keys(this.attributes).map(key => ` ${key}="${this.attributes[key]}"`).join('');
-  }
-
-  toString() {
-    return `<${this.name}${this.buildAttrString()}>`;
-  }
-}
-// PairedTag End
-
-// BuildNode start
 const buildNode = (name, ...args) => {
   const singleTagsList = new Set(['hr', 'br', 'img']);
   return singleTagsList.has(name) ?
     new SingleTag(name, ...args) : new PairedTag(name, ...args);
 };
-// BuildNide end
 
-// Solution Start
 const propertyActions = [
   {
     name: 'body',
@@ -80,6 +43,5 @@ const parse = (data) => {
   }, root);
   return buildNode(args.name, args.attributes, args.body, args.children);
 };
-// Solution End
 
-export { parse, PairedTag, SingleTag };
+export default parse;
