@@ -1,4 +1,4 @@
-import Tree from '../../src/error_handler/tree';
+import Tree from '../../src/error_handler/tree/Tree';
 
 describe('Tree', () => {
   let tree;

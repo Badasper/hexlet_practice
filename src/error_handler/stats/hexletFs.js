@@ -1,5 +1,5 @@
 import path from 'path';
-import Tree from '../tree'; // eslint-disable-line
+import Tree from '../tree/Tree'; // eslint-disable-line
 
 import Dir from './Dir';
 import File from './File';
