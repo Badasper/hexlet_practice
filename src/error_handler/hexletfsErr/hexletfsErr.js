@@ -20,7 +20,6 @@ export default class {
     return [current.getMeta().getStats(), null];
   }
 
-  // BEGIN (write your solution here)
   unlinkSync(filepath) {
     const file = this.findNode(filepath);
     if (!file) {
@@ -55,7 +54,6 @@ export default class {
     }
     return [file.getMeta().getBody(), null];
   }
-  // END
 
   mkdirpSync(filepath) {
     const iter = (parts, subtree) => {
@@ -103,5 +101,4 @@ export default class {
     const parts = getPathParts(filepath);
     return parts.length === 0 ? this.tree : this.tree.getDeepChild(parts);
   }
-
 }
