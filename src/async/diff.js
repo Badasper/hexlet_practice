@@ -1,6 +1,5 @@
 import fs from 'fs';
 
-
 const compare = (data1, data2) => {
   const lines1 = data1.split('\n').slice(0, -1);
   const lines2 = data2.split('\n').slice(0, -1);

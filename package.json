@@ -53,6 +53,7 @@
     "path": "*",
     "errno": "*",
     "url": "*",
-    "http": "*"
+    "http": "*",
+    "javascript-state-machine": "*"
   }
 }
